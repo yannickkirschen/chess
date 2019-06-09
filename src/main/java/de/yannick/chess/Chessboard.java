@@ -1,8 +1,8 @@
 package de.yannick.chess;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import de.yannick.chess.geometry.Move;
 import de.yannick.chess.geometry.Position;
@@ -15,7 +15,7 @@ import de.yannick.chess.pieces.Piece;
  * @since May 6, 2019
  *
  */
-public class Chessboard implements Iterable<Position> {
+public class Chessboard {
 	private Map<Position, Piece> board = new HashMap<>();
 
 	/**
@@ -76,10 +76,8 @@ public class Chessboard implements Iterable<Position> {
 	/**
 	 * Moves a Piece from one position to another. Note, that it is not checked, if the move is allowed!
 	 *
-	 * @param oldPosition
-	 *            Position of the piece to move.
-	 * @param newPosition
-	 *            Position to move. Consider, that it is not checked, if there is already a piece on the new position.
+	 * @param move
+	 *            The move to execute.
 	 */
 	public void move(Move move) {
 		board.put(move.getEnd(), board.get(move.getStart()));
@@ -101,9 +99,8 @@ public class Chessboard implements Iterable<Position> {
 		return board;
 	}
 
-	@Override
-	public Iterator<Position> iterator() {
-		return board.keySet().iterator();
+	public Set<Position> iterator() {
+		return board.keySet();
 	}
 
 	@Override
@@ -139,6 +136,11 @@ public class Chessboard implements Iterable<Position> {
 			return false;
 		}
 		return true;
+	}
+
+	@Override
+	public Chessboard clone() {
+		return this;
 	}
 
 }

@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import de.yannick.chess.automation.AutomationProcess;
+import de.yannick.chess.automation.GeneratedMove;
 import de.yannick.chess.geometry.Move;
 import de.yannick.chess.geometry.Position;
 import de.yannick.chess.pieces.Bishop;
@@ -156,6 +158,7 @@ public class Chess {
 	 */
 	public void run() throws ChessException, IOException {
 		final String os = System.getProperty("os.name");
+		AutomationProcess auto = new AutomationProcess(board);
 
 		while (run) {
 			if (os.contains("Windows")) {
@@ -164,6 +167,9 @@ public class Chess {
 				Runtime.getRuntime().exec("clear");
 			}
 			out();
+
+			GeneratedMove genMove = auto.generateMove(activePlayer);
+			System.out.println("Recomendation: " + genMove.toString());
 
 			System.out.print("> ");
 			String in = input.readLine();
