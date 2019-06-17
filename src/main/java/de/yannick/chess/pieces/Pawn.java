@@ -4,9 +4,9 @@ import de.yannick.chess.ChessException;
 import de.yannick.chess.Chessboard;
 import de.yannick.chess.Player;
 import de.yannick.chess.geometry.Position;
-import de.yannick.chess.interfaces.Jumpcapable;
+import de.yannick.chess.interfaces.Jumps;
 
-public class Pawn extends Piece implements Jumpcapable {
+public class Pawn extends Piece implements Jumps {
 
 	public Pawn(Chessboard board, Player player, int id) {
 		super(board, player, id);
