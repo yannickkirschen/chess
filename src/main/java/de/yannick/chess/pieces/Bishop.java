@@ -3,9 +3,9 @@ package de.yannick.chess.pieces;
 import de.yannick.chess.ChessException;
 import de.yannick.chess.Chessboard;
 import de.yannick.chess.Player;
-import de.yannick.chess.interfaces.Jumpcapable;
+import de.yannick.chess.interfaces.Jumps;
 
-public class Bishop extends Piece implements Jumpcapable {
+public class Bishop extends Piece implements Jumps {
 
 	public Bishop(Chessboard board, Player player, int id) {
 		super(board, player, id);
