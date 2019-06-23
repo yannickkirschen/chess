@@ -1,7 +1,10 @@
 package de.yannick.chess.automation;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import de.yannick.chess.ChessException;
 import de.yannick.chess.Chessboard;
@@ -19,11 +22,10 @@ import de.yannick.chess.pieces.Piece;
  */
 class MoveGenerator {
 	private Chessboard board;
-	private Map<Move, Piece> moves;
 
 	/**
 	 * Creates a new {@code MoveGenerator}.
-	 * 
+	 *
 	 * @param board
 	 *            The board that should be used for generating the possible moves.
 	 */
@@ -39,7 +41,7 @@ class MoveGenerator {
 	 * @return A map with the possible move as key and its piece as value.
 	 */
 	public Map<Move, Piece> generate(Player player) {
-		moves = new HashMap<>();
+		Map<Move, Piece> moves = new HashMap<>();
 
 		for (Position pos : board.iterator()) {
 			Piece p = board.get(pos);
@@ -58,6 +60,18 @@ class MoveGenerator {
 			}
 		}
 		return moves;
+	}
+
+	public List<Chessboard> executeMoves(Player player) {
+		List<Chessboard> newBoards = new LinkedList<>();
+		Map<Move, Piece> moves = generate(player);
+
+		for (Entry<Move, Piece> move : moves.entrySet()) {
+			Chessboard newBoard = board.clone();
+			newBoard.move(move.getKey());
+			newBoards.add(newBoard);
+		}
+		return newBoards;
 	}
 
 }

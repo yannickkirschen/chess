@@ -24,26 +24,14 @@ public class AutomationProcess {
 	}
 
 	public GeneratedMove generateMove(Player player, int depth) {
-		// MoveGenerator generator = new MoveGenerator(board);
-		// for (int z = 0; z < depth; z++) {
-		// for (Move move : generator.generate(player).keySet()) {
-		// Chessboard newBoard = board.clone();
-		// newBoard.move(move);
-		// tree.addChild(new AutomationTree(newBoard));
-		//
-		// for (AutomationTree tree : tree.getChildrens()) {
-		// Chessboard newoard = board.clone();
-		// newBoard.move(move);
-		// tree.addChild(new AutomationTree(newoard));
-		// }
-		//
-		// player = player == Player.ONE ? Player.TWO : Player.ONE;
-		// }
-		// }
-		//
-		// System.out.println(tree);
-
+		tree = new AutomationTree(board);
+		for (int i = 0; i < depth; i++) {
+			System.out.println(i);
+			MoveGenerator generator = new MoveGenerator(board);
+			for (Chessboard b : generator.executeMoves(player)) {
+				tree.addChild(new AutomationTree(b));
+			}
+		}
 		return new GeneratedMove(null, null);
 	}
-
 }
