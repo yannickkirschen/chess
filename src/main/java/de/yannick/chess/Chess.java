@@ -155,15 +155,14 @@ public class Chess {
 	 *             If there occures an error while reading the users input.
 	 */
 	public void run() throws ChessException, IOException {
-		final String os = System.getProperty("os.name");
+		// AutomationProcess auto = new AutomationProcess(board);
 
 		while (run) {
-			if (os.contains("Windows")) {
-				Runtime.getRuntime().exec("cls");
-			} else {
-				Runtime.getRuntime().exec("clear");
-			}
+			System.out.print("\033[H\033[2J");
 			out();
+
+			// GeneratedMove genMove = auto.generateMove(activePlayer);
+			// System.out.println("Recomendation: " + genMove.toString());
 
 			System.out.print("> ");
 			String in = input.readLine();

@@ -9,7 +9,7 @@ import de.yannick.chess.ChessException;
  * @since May 20, 2019
  *
  */
-public interface Jumpcapable {
+public interface Jumps {
 	/**
 	 * Checks, if the piece would leap another character, if the move is executed.
 	 *
