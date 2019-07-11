@@ -2,7 +2,7 @@
 Chess game written in Java.
 
 ```
-mvn clesn install
+mvn clean install
 java -jar target/Chess.jar
 ```
 
