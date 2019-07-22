@@ -1,11 +1,12 @@
 # Chess
 
 `Chess` is a two-player chess game written in Java.
+
 The Java version is set to 11. You can edit the `pom.xml` and set it to >=8 if you want to.
 
 ## Running
 
-Once you've downloaded the JAR, you can start the game by typing
+Start the game by typing
 
 ```
 git clone https://github.com/yannickkirschen/Chess
