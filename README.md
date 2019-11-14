@@ -2,7 +2,7 @@
 
 `Chess` is a two-player chess game written in Java.
 
-The Java version is set to 11. You can edit the `pom.xml` and set it to >=8 if you want to.
+The Java version is set to 13. You can edit the `pom.xml` and set it to >=8 if you want to.
 
 ## Running
 
