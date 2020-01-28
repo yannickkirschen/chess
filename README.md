@@ -1,5 +1,7 @@
 # Chess
 
+[![](https://api.dependabot.com/badges/status?host=github&repo=yannickkirschen/Chess)](https://dependabot.com)
+
 `Chess` is a two-player chess game written in Java.
 
 The Java version is set to 13. You can edit the `pom.xml` and set it to >=8 if you want to.
