@@ -1,6 +1,6 @@
 # Chess
 
-[![](https://api.dependabot.com/badges/status?host=github&repo=yannickkirschen/chess)](https://dependabot.com)
+[![](https://api.dependabot.com/badges/status?host=github&repo=yannickkirschen/Chess)](https://dependabot.com)
 
 `Chess` is a two-player chess game written in Java.
 
