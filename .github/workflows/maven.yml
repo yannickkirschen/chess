@@ -1,4 +1,4 @@
-name: Maven Clean Install
+name: Maven clean install
 
 on: [push]
 
