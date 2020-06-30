@@ -1,7 +1,6 @@
 # Chess
 
 ![GitHub Workflow build status badge](https://github.com/yannickkirschen/chess/workflows/Maven%20clean%20install/badge.svg)
-[![](https://api.dependabot.com/badges/status?host=github&repo=yannickkirschen/chess)](https://dependabot.com)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yannickkirschen/chess/graphs/commit-activity)
 [![GitHub license](https://img.shields.io/github/license/yannickkirschen/chess.svg)](https://github.com/yannickkirschen/chess/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/yannickkirschen/chess.svg)](https://github.com/yannickkirschen/chess/releases/)
